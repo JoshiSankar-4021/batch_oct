@@ -28,7 +28,7 @@ function Counter(){
        <button onClick={increase}>Increment</button>
        <button onClick={()=>{decrease()}}>Decrement</button>
     </div>
-   
+
     );
 }
 export default Counter;
