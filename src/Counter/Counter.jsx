@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 function Counter(){
     const [Count,setCount]=useState(0);
     //const [var,setvar]=usestate(0)
@@ -17,6 +18,8 @@ function Counter(){
         setCount(Count-1);
     }
 
+    const navigate = useNavigate();
+
     return(
     <div>
        <h1>Counter</h1>
@@ -26,7 +29,8 @@ function Counter(){
        <button onClick={increasecount}>Increment</button>
        <button onClick={()=>{decreasecount()}}>Decrement</button><br/>
        <button onClick={increase}>Increment</button>
-       <button onClick={()=>{decrease()}}>Decrement</button>
+       <button onClick={()=>{decrease()}}>Decrement</button><br/>
+       <button onClick={()=>{navigate('/form')}}>FORMS</button>
     </div>
 
     );

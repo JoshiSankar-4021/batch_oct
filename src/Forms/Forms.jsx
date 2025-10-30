@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import { NavLink,Link } from 'react-router-dom';
 function Forms(){
     const [formdata,setFormdata]=useState({
         email:'',
@@ -25,7 +26,9 @@ function Forms(){
             <lable>Password</lable>
             <input type="password" name="password" value={formdata.password} onChange={handlechanges}/>
             <input type="submit"/>
-            <button onClick={handlesubmit}>print</button>
+            <button onClick={handlesubmit}>print</button><br/>
+            <NavLink to='/'>Counter nav link</NavLink><br/>  
+            <Link to='/'>Counte link</Link>
         </form>
     </div>)
 }
