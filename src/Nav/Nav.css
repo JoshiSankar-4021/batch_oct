@@ -1,0 +1,12 @@
+.navlink{
+    text-decoration: none;
+    color:black;
+    margin:10px;
+    margin-top: 20px;
+    border:2px solid black;
+    border-radius:10px;
+    padding:10px;
+}
+.navdiv{
+    background-color: aqua;
+}

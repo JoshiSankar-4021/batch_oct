@@ -1,12 +1,16 @@
 import { NavLink } from "react-router-dom";
+import './Nav.css';
 function Nav(){
     return(
-        <div>
-            <NavLink to='/'>COUNTER</NavLink><br/>
-            <NavLink to='/form'>Form</NavLink><br/>
-            <NavLink to='/padding'>Padding & inline styling</NavLink><br/>
-            <NavLink to='/border'>Border & internal styling</NavLink><br/>
-            <NavLink to='/Margin'>Margin & External styling</NavLink>
+        <div className="navdiv">
+            <NavLink to='/' className="navlink">COUNTER</NavLink>
+            <NavLink to='/form' className="navlink">Form</NavLink>
+            <NavLink to='/padding' className="navlink">Padding & inline styling</NavLink>
+            <NavLink to='/border'className="navlink">Border & internal styling</NavLink>
+            <NavLink to='/Margin'className="navlink">Margin & External styling</NavLink>
+            <NavLink to='/Box' className="navlink">Box Component</NavLink>
+            <NavLink to='/Forms' className="navlink">Forms Component</NavLink>
+            <NavLink to='/Rendering' className="navlink">Rendering</NavLink>
         </div>
     )
 }

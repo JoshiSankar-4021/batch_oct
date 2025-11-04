@@ -5,6 +5,9 @@ import Nav from './Nav/Nav.jsx';
 import Padding from './Padding/Padding.jsx';
 import Border from './Border/Border.jsx';
 import Margin from './Margin/Margin.jsx';
+import Box from './Box/Box.jsx';
+import Forms from './Forms/Forms.jsx';
+import Rendering from './Rendering/Rendering.jsx';
 function App(){
   return(
     <>
@@ -15,6 +18,9 @@ function App(){
         <Route path='/padding' element={<Padding/>}/>
         <Route path='/border' element={<Border/>}/>
         <Route path='/Margin' element={<Margin/>}/>
+        <Route path='/Box' element={<Box/>}/>
+        <Route path='/Forms' element={<Forms/>}/>
+        <Route path='/Rendering' element={<Rendering/>}/>
       </Routes>
     </>
   );

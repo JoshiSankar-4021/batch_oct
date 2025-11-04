@@ -1,35 +1,36 @@
-import {useState} from 'react';
-import { NavLink,Link } from 'react-router-dom';
+import {useState} from "react";
+import './Forms.css';
 function Forms(){
-    const [formdata,setFormdata]=useState({
-        email:'',
-        password:''
-    })
-    const handlechanges=(e)=>{
-        const {name,value} = e.target;
-        setFormdata((prevData)=>({
-            ...prevData,
-            [name]:value,
-        }));
+    const [form,setForm]=useState({
+        email:"",
+        password:""
+    });
+
+    const handleChanges=(e)=>{
+        const {name,value}=e.target;
+        setForm({...form,[name]:value})
     }
-    const handlesubmit=(e)=>{
+
+    const handleSubmit=(e)=>{
         e.preventDefault();
-        console.log(formdata);
+        console.log(form);
     }
 
     return(
-    <div>
-        <h1>FORMS</h1>
-        <form onSubmit={handlesubmit}>
-            <lable>Email</lable>
-            <input type="email" name="email" value={formdata.email} onChange={handlechanges}/>
-            <lable>Password</lable>
-            <input type="password" name="password" value={formdata.password} onChange={handlechanges}/>
-            <input type="submit"/>
-            <button onClick={handlesubmit}>print</button><br/>
-            <NavLink to='/'>Counter nav link</NavLink><br/>  
-            <Link to='/'>Counte link</Link>
-        </form>
-    </div>)
+        <div>
+            <h1>This is Form Component</h1>
+            <div className="form-div">
+                <form>
+                <lable className='form-lable'>Email</lable>
+                <input type="email" className='form-input' name="email" value={form.email} onChange={handleChanges}/>
+                <lable  className='form-lable'>Password</lable>
+                <input type="password" className='form-input' name="password" value={form.password} onChange={handleChanges}/>
+                <button className="submit" onClick={handleSubmit}>Submit</button>
+            </form>
+            <h1>{form.email}</h1>
+            <h1>{form.password}</h1>
+            </div>
+        </div>
+    );
 }
 export default Forms;
