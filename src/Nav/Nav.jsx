@@ -11,6 +11,8 @@ function Nav(){
             <NavLink to='/Box' className="navlink">Box Component</NavLink>
             <NavLink to='/Forms' className="navlink">Forms Component</NavLink>
             <NavLink to='/Rendering' className="navlink">Rendering</NavLink>
+            <NavLink to='/Images' className="navlink">Images</NavLink>
+            <NavLink to='/Animation' className="navlink">Animation</NavLink>
         </div>
     )
 }

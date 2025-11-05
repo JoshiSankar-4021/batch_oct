@@ -8,6 +8,8 @@ import Margin from './Margin/Margin.jsx';
 import Box from './Box/Box.jsx';
 import Forms from './Forms/Forms.jsx';
 import Rendering from './Rendering/Rendering.jsx';
+import Images from './Images/Imges.jsx';
+import Animation from './Animations/Animation.jsx';
 function App(){
   return(
     <>
@@ -21,6 +23,8 @@ function App(){
         <Route path='/Box' element={<Box/>}/>
         <Route path='/Forms' element={<Forms/>}/>
         <Route path='/Rendering' element={<Rendering/>}/>
+        <Route path='/Images' element={<Images/>}/>
+        <Route path='/Animation' element={<Animation/>}/>
       </Routes>
     </>
   );
